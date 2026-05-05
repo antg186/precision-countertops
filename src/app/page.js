@@ -119,25 +119,42 @@ export default function Home() {
   </div>
 </header>
 
-      <section className="bg-stone-950 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 lg:grid-cols-2">
+            <section className="relative overflow-hidden bg-stone-950 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(180,135,80,0.28),transparent_35%)]" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
           <div>
             <p className="mb-5 inline-flex rounded-full border border-white/20 px-4 py-2 text-sm text-stone-200">
               Family-owned • Licensed & insured • 30+ years experience
             </p>
 
-            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-             Residential Laminate & Solid Surface Countertops in Greater Houston
+            <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
+              Residential Laminate & Solid Surface Countertops in Greater Houston
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-              Precision Countertops is a family-owned countertop shop specializing in laminate, postform, butcher block, and solid surface countertops for homeowners across the Greater Houston Area.
+              Precision Countertops is a family-owned countertop shop specializing
+              in laminate, postform, butcher block, and solid surface countertops
+              for homeowners across the Greater Houston Area.
             </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {["Laminate", "Postform", "Butcher Block", "Solid Surface"].map(
+                (item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-stone-100"
+                  >
+                    {item}
+                  </span>
+                )
+              )}
+            </div>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="tel:2814439785"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 font-semibold text-stone-950"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 font-semibold text-stone-950 shadow-lg transition hover:bg-stone-100"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call 281-443-9785
@@ -145,42 +162,74 @@ export default function Home() {
 
               <a
                 href="sms:8327032596"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/30 px-6 py-4 font-semibold text-white"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/30 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
               >
                 <MessageSquareText className="mr-2 h-5 w-5" />
                 Text Photos
               </a>
             </div>
+
+            <p className="mt-5 text-sm leading-6 text-stone-400">
+               Send photos, rough measurements, material preference, and city by text
+               or email for the fastest starting quote.
+            </p>
           </div>
 
-          <div className="rounded-3xl bg-white p-8 text-stone-950">
-            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
-              Start here
-            </p>
+          <div className="rounded-[2rem] border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur">
+            <div className="rounded-[1.5rem] bg-white p-8 text-stone-950">
+              <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+                Start Your Quote
+              </p>
 
-            <h2 className="mt-4 text-3xl font-bold">
-              Send photos before scheduling a measure.
-            </h2>
+              <h2 className="mt-4 text-3xl font-bold">
+                Send photos before scheduling a measure.
+              </h2>
 
-            <p className="mt-4 leading-7 text-stone-700">
-              To avoid wasted trips, send your city, layout photos, cabinet
-              status, and rough measurements first. We’ll help determine the
-              next step for your countertop project.
-            </p>
+              <p className="mt-4 leading-7 text-stone-700">
+                To avoid wasted trips, send your city, layout photos, cabinet
+                status, and rough measurements first. We’ll help determine the
+                next step for your countertop project.
+              </p>
 
-            <div className="mt-8 space-y-4">
-              {[
-                "Photos of current countertops or cabinet layout",
-                "City or ZIP code",
-                "Material you’re interested in",
-                "New cabinets or existing cabinets",
-                "Approximate measurements if available",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-2xl bg-stone-100 p-4">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 text-amber-700" />
-                  <p className="text-sm font-medium">{item}</p>
-                </div>
-              ))}
+              <div className="mt-8 space-y-4">
+                {[
+                  "Photos of current countertops or cabinet layout",
+                  "City or ZIP code",
+                  "Material you’re interested in",
+                  "New cabinets or existing cabinets",
+                  "Approximate measurements if available",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl bg-stone-100 p-4"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-amber-700" />
+                    <p className="text-sm font-medium">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 grid gap-3">
+                <a
+                  href="sms:8327032596"
+                  className="rounded-2xl bg-stone-950 p-5 text-white transition hover:bg-stone-800"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
+                    Text Photos
+                  </p>
+                  <p className="mt-2 text-2xl font-bold">832-703-2596</p>
+                </a>
+
+                <a
+                  href="mailto:quotes@precisionctops.com"
+                  className="rounded-2xl border border-stone-200 bg-stone-50 p-5 text-stone-950 transition hover:bg-stone-100"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
+                    Email Photos
+                  </p>
+                  <p className="mt-2 text-xl font-bold">quotes@precisionctops.com</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -352,8 +401,8 @@ export default function Home() {
           <div className="mt-10 rounded-3xl bg-stone-950 p-8 text-white">
             <h3 className="text-2xl font-bold">Need pricing faster?</h3>
             <p className="mt-3 text-stone-300">
-              Text photos, measurements, material preference, and city to
-              832-703-2596.
+              Text photos, measurements, material preference, and city to 832-703-2596,
+              or email them to quotes@precisionctops.com.
             </p>
           </div>
         </div>
@@ -488,7 +537,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-300">
-              Call the office or text photos of your layout, measurements,
+              Call the office, text photos, or email your layout, measurements,
               material preference, and city. We’ll review the project details
               and help determine the next step.
             </p>
@@ -515,6 +564,19 @@ export default function Home() {
                     Office Phone
                   </p>
                   <p className="text-2xl font-bold">281-443-9785</p>
+                </div>
+              </a>
+
+              <a
+                href="mailto:quotes@precisionctops.com"
+                className="flex items-center gap-4 rounded-3xl border border-stone-200 p-5 transition hover:bg-stone-50"
+              >
+                <MessageSquareText className="h-7 w-7 text-amber-700" />
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
+                    Email Photos
+                  </p>
+                  <p className="text-xl font-bold">quotes@precisionctops.com</p>
                 </div>
               </a>
 
