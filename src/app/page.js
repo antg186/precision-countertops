@@ -109,13 +109,11 @@ export default function Home() {
             </p>
 
             <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-              Residential Countertop Fabrication & Installation
+             Residential Laminate & Solid Surface Countertops in Greater Houston
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-              Precision Countertops specializes in laminate, postform, butcher
-              block, and solid surface countertops for homeowners across the
-              Greater Houston Area.
+              Precision Countertops is a family-owned countertop shop specializing in laminate, postform, butcher block, and solid surface countertops for homeowners across the Greater Houston Area.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
