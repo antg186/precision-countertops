@@ -1,65 +1,232 @@
-import Image from "next/image";
+import {
+  Phone,
+  MessageSquareText,
+  ShieldCheck,
+  Hammer,
+  Home as HomeIcon,
+  Clock,
+  CheckCircle2,
+} from "lucide-react";
+
+const services = [
+  "Laminate Countertops",
+  "Postform Countertops",
+  "Custom Laminate",
+  "Solid Surface Countertops",
+  "Butcher Block Countertops",
+  "Countertop Measurement",
+  "Countertop Installation",
+  "Demo & Removal",
+];
+
+const serviceAreas = [
+  "Houston",
+  "Spring",
+  "The Woodlands",
+  "Conroe",
+  "Cypress",
+  "Tomball",
+  "Willis",
+  "Brenham",
+  "College Station",
+  "Katy",
+  "Magnolia",
+  "Montgomery",
+];
+
+const trustPoints = [
+  {
+    icon: <Clock className="h-6 w-6" />,
+    title: "30+ Years Experience",
+    text: "Decades of hands-on countertop fabrication and installation experience.",
+  },
+  {
+    icon: <HomeIcon className="h-6 w-6" />,
+    title: "Family-Owned",
+    text: "A local residential countertop company serving Greater Houston homeowners.",
+  },
+  {
+    icon: <ShieldCheck className="h-6 w-6" />,
+    title: "Licensed & Insured",
+    text: "Professional service with the experience and coverage homeowners expect.",
+  },
+  {
+    icon: <Hammer className="h-6 w-6" />,
+    title: "Fabricated In-House",
+    text: "Your countertops are fabricated in our own shop for better control and quality.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-stone-50 text-stone-950">
+      <header className="border-b border-stone-200 bg-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          <div>
+            <p className="text-xl font-bold">Precision Countertops</p>
+            <p className="text-xs font-medium uppercase tracking-widest text-stone-500">
+              Greater Houston Area
+            </p>
+          </div>
+
+          <a
+            href="tel:2814439785"
+            className="rounded-full bg-stone-950 px-5 py-3 text-sm font-semibold text-white"
+          >
+            Call Office
+          </a>
+        </div>
+      </header>
+
+      <section className="bg-stone-950 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 lg:grid-cols-2">
+          <div>
+            <p className="mb-5 inline-flex rounded-full border border-white/20 px-4 py-2 text-sm text-stone-200">
+              Family-owned • Licensed & insured • 30+ years experience
+            </p>
+
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+              Residential Countertop Fabrication & Installation
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+              Precision Countertops specializes in laminate, postform, butcher
+              block, and solid surface countertops for homeowners across the
+              Greater Houston Area.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="tel:2814439785"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 font-semibold text-stone-950"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Call 281-443-9785
+              </a>
+
+              <a
+                href="sms:8327032596"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/30 px-6 py-4 font-semibold text-white"
+              >
+                <MessageSquareText className="mr-2 h-5 w-5" />
+                Text Photos
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-8 text-stone-950">
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+              Start here
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold">
+              Send photos before scheduling a measure.
+            </h2>
+
+            <p className="mt-4 leading-7 text-stone-700">
+              To avoid wasted trips, send your city, layout photos, cabinet
+              status, and rough measurements first. We’ll help determine the
+              next step for your countertop project.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {[
+                "Photos of current countertops or cabinet layout",
+                "City or ZIP code",
+                "Material you’re interested in",
+                "New cabinets or existing cabinets",
+                "Approximate measurements if available",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 rounded-2xl bg-stone-100 p-4">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 text-amber-700" />
+                  <p className="text-sm font-medium">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-5 md:grid-cols-4">
+          {trustPoints.map((point) => (
+            <div key={point.title} className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
+              <div className="mb-5 inline-flex rounded-2xl bg-amber-100 p-3 text-amber-800">
+                {point.icon}
+              </div>
+              <h3 className="text-lg font-bold">{point.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-stone-600">
+                {point.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+            Our Services
           </p>
+
+          <h2 className="mt-4 text-4xl font-bold">
+            Countertop services for residential projects.
+          </h2>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <div key={service} className="rounded-3xl border border-stone-200 bg-stone-50 p-6 font-semibold">
+                {service}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+          Service Areas
+        </p>
+
+        <h2 className="mt-4 text-4xl font-bold">
+          Serving Greater Houston and surrounding communities.
+        </h2>
+
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+          {serviceAreas.map((area) => (
+            <div key={area} className="rounded-2xl border border-stone-200 bg-white px-5 py-4 font-semibold shadow-sm">
+              {area}
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="bg-stone-950 px-6 py-20 text-white">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
+            Contact
+          </p>
+
+          <h2 className="mt-4 text-4xl font-bold">
+            Ready to start your countertop project?
+          </h2>
+
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-300">
+            Call the office or text photos of your layout, measurements, and
+            city to get started.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="tel:2814439785" className="rounded-2xl bg-white px-6 py-4 text-center font-semibold text-stone-950">
+              Call 281-443-9785
+            </a>
+
+            <a href="sms:8327032596" className="rounded-2xl border border-white/30 px-6 py-4 text-center font-semibold text-white">
+              Text Photos: 832-703-2596
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
