@@ -102,6 +102,9 @@ export default function Home() {
       <a href="#process" className="hover:text-stone-950">
         Quote Process
       </a>
+      <a href="#quote" className="hover:text-stone-950">
+        Request Quote
+      </a>
       <a href="#areas" className="hover:text-stone-950">
         Service Areas
       </a>
@@ -521,6 +524,90 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+            <section id="quote" className="bg-stone-100 px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+              Request a Quote
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+              Send the details we need to price your countertop project.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-stone-600">
+              The more details you send up front, the easier it is for us to
+              understand the project before scheduling a measure.
+            </p>
+
+            <div className="mt-8 rounded-3xl bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-bold">Send your project details to:</h3>
+
+              <div className="mt-5 grid gap-4">
+                <a
+                  href="sms:8327032596"
+                  className="rounded-2xl bg-stone-950 px-5 py-4 text-center font-semibold text-white transition hover:bg-stone-800"
+                >
+                  Text Photos: 832-703-2596
+                </a>
+
+                <a
+                  href="mailto:quotes@precisionctops.com"
+                  className="rounded-2xl border border-stone-300 bg-stone-50 px-5 py-4 text-center font-semibold text-stone-950 transition hover:bg-white"
+                >
+                  Email Photos: quotes@precisionctops.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-8 shadow-sm">
+            <h3 className="text-2xl font-bold">
+              What to include for a faster quote
+            </h3>
+
+            <div className="mt-8 grid gap-4">
+              {[
+                {
+                  title: "1. Photos of the layout",
+                  text: "Send photos of your current countertops, cabinets, or project area.",
+                },
+                {
+                  title: "2. City or ZIP code",
+                  text: "This helps us confirm service availability and scheduling.",
+                },
+                {
+                  title: "3. Material preference",
+                  text: "Let us know if you want laminate, postform, butcher block, or solid surface.",
+                },
+                {
+                  title: "4. Cabinet status",
+                  text: "Tell us if cabinets are existing, being replaced, or already installed.",
+                },
+                {
+                  title: "5. Rough measurements",
+                  text: "Measurements, drawings, or a simple sketch can help us provide a better starting point.",
+                },
+                {
+                  title: "6. Timeline",
+                  text: "Let us know when you are hoping to have the project measured or installed.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-stone-200 bg-stone-50 p-5"
+                >
+                  <h4 className="font-bold">{item.title}</h4>
+                  <p className="mt-2 text-sm leading-6 text-stone-600">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
