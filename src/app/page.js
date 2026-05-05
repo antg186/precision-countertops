@@ -476,29 +476,81 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-stone-950 px-6 py-20 text-white">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
-            Contact
-          </p>
+            <section id="contact" className="bg-stone-950 px-6 py-20 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.9fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
+              Contact Precision Countertops
+            </p>
 
-          <h2 className="mt-4 text-4xl font-bold">
-            Ready to start your countertop project?
-          </h2>
+            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+              Start your countertop quote today.
+            </h2>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-300">
-            Call the office or text photos of your layout, measurements, and
-            city to get started.
-          </p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-300">
+              Call the office or text photos of your layout, measurements,
+              material preference, and city. We’ll review the project details
+              and help determine the next step.
+            </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="tel:2814439785" className="rounded-2xl bg-white px-6 py-4 text-center font-semibold text-stone-950">
-              Call 281-443-9785
-            </a>
+            <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-xl font-bold">Before scheduling a measure</h3>
+              <p className="mt-3 leading-7 text-stone-300">
+                For new cabinets, the cabinets should be fully installed before
+                final measuring. For replacement countertops, photos and rough
+                measurements help us understand the project before scheduling.
+              </p>
+            </div>
+          </div>
 
-            <a href="sms:8327032596" className="rounded-2xl border border-white/30 px-6 py-4 text-center font-semibold text-white">
-              Text Photos: 832-703-2596
-            </a>
+          <div className="rounded-3xl bg-white p-6 text-stone-950 shadow-2xl">
+            <div className="space-y-5">
+              <a
+                href="tel:2814439785"
+                className="flex items-center gap-4 rounded-3xl border border-stone-200 p-5 transition hover:bg-stone-50"
+              >
+                <Phone className="h-7 w-7 text-amber-700" />
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
+                    Office Phone
+                  </p>
+                  <p className="text-2xl font-bold">281-443-9785</p>
+                </div>
+              </a>
+
+              <a
+                href="sms:8327032596"
+                className="flex items-center gap-4 rounded-3xl border border-stone-200 p-5 transition hover:bg-stone-50"
+              >
+                <MessageSquareText className="h-7 w-7 text-amber-700" />
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
+                    Text Photos
+                  </p>
+                  <p className="text-2xl font-bold">832-703-2596</p>
+                </div>
+              </a>
+
+              <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
+                <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
+                  Service Area
+                </p>
+                <p className="mt-2 text-lg font-bold">
+                  Greater Houston Area & Surrounding Communities
+                </p>
+                <p className="mt-3 text-sm leading-6 text-stone-600">
+                  Serving Houston, Spring, The Woodlands, Conroe, Cypress,
+                  Tomball, Willis, Brenham, College Station, and nearby areas.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-amber-200 bg-amber-50 p-5">
+                <p className="text-sm font-semibold text-amber-900">
+                  Shop visits and in-person measures are scheduled by project
+                  fit, location, material, and availability.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
