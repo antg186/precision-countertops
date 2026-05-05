@@ -225,6 +225,67 @@ export default function Home() {
         </div>
       </section>
 
+            <section id="process" className="bg-stone-100 px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+                Quote Process
+              </p>
+
+              <h2 className="mt-4 text-4xl font-bold">
+                A better way to start your countertop quote.
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-stone-600">
+                Instead of sending someone out before knowing the project details,
+                we start with photos and basic information. This helps save time
+                and gives you a clearer next step.
+              </p>
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              {[
+                {
+                  title: "1. Send Photos",
+                  text: "Text photos of your current countertops, cabinets, or layout drawings.",
+                },
+                {
+                  title: "2. Share Location",
+                  text: "Send your city or ZIP code so we can confirm service availability.",
+                },
+                {
+                  title: "3. Choose Material",
+                  text: "Let us know if you want laminate, postform, butcher block, or solid surface.",
+                },
+                {
+                  title: "4. Schedule Next Step",
+                  text: "If the project is a good fit, we’ll help move it toward measure and install.",
+                },
+              ].map((step) => (
+                <div
+                  key={step.title}
+                  className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm"
+                >
+                  <h3 className="text-lg font-bold">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-stone-600">
+                    {step.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-3xl bg-stone-950 p-8 text-white">
+            <h3 className="text-2xl font-bold">Need pricing faster?</h3>
+            <p className="mt-3 text-stone-300">
+              Text photos, measurements, material preference, and city to
+              832-703-2596.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-20">
         <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
           Service Areas
