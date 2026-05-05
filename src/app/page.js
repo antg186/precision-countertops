@@ -183,6 +183,48 @@ export default function Home() {
         </div>
       </section>
 
+            <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 lg:grid-cols-3">
+        <div className="rounded-3xl bg-stone-950 p-8 text-white">
+          <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
+            Materials
+          </p>
+
+          <h2 className="mt-4 text-4xl font-bold">
+            Brands and materials we work with.
+          </h2>
+
+          <p className="mt-5 leading-7 text-stone-300">
+            Turnaround depends on material selection, edge details, project size,
+            and scheduling.
+          </p>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-3 lg:col-span-2">
+          {[
+            {
+              title: "Wilsonart",
+              text: "Popular laminate options for residential kitchens, bathrooms, laundry rooms, and workspaces.",
+            },
+            {
+              title: "Formica",
+              text: "Durable laminate selections with many colors, patterns, and textures for practical countertop projects.",
+            },
+            {
+              title: "Corian",
+              text: "Solid surface material with a clean look, smooth feel, and repairable surface.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm"
+            >
+              <h3 className="text-2xl font-bold">{item.title}</h3>
+              <p className="mt-4 leading-7 text-stone-600">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-20">
         <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
           Service Areas
