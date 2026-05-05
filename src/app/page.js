@@ -412,6 +412,70 @@ export default function Home() {
         </div>
       </section>
 
+            <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+              FAQ
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold">
+              Common countertop questions.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-stone-600">
+              Here are a few things to know before starting your countertop
+              project with Precision Countertops.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {[
+              {
+                question: "Do you offer free estimates?",
+                answer:
+                  "We start by reviewing photos, measurements, location, material preference, and cabinet status first. This helps us understand the project before scheduling any in-person measure.",
+              },
+              {
+                question: "Can you quote from photos?",
+                answer:
+                  "Photos and rough measurements can help us provide a starting point. Final pricing may depend on the exact layout, material, edge details, and site conditions.",
+              },
+              {
+                question: "When should new cabinets be measured?",
+                answer:
+                  "For the most accurate countertop measurement, new cabinets should be fully installed before the final measure is scheduled.",
+              },
+              {
+                question: "What materials do you work with?",
+                answer:
+                  "We work with laminate, postform, butcher block, and solid surface materials, including brands like Wilsonart, Formica, and Corian.",
+              },
+              {
+                question: "What areas do you serve?",
+                answer:
+                  "We serve the Greater Houston Area and surrounding communities. Availability may depend on project size, schedule, material, and location.",
+              },
+              {
+                question: "Do you do commercial work?",
+                answer:
+                  "Precision Countertops mainly focuses on residential countertop projects for homeowners.",
+              },
+            ].map((item) => (
+              <div
+                key={item.question}
+                className="rounded-3xl border border-stone-200 bg-stone-50 p-6"
+              >
+                <h3 className="text-lg font-bold">{item.question}</h3>
+                <p className="mt-3 text-sm leading-6 text-stone-600">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="bg-stone-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
