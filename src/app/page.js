@@ -34,6 +34,29 @@ const serviceAreas = [
   "Montgomery",
 ];
 
+const countertopStyles = [
+  {
+    title: "Postform Countertops",
+    text: "A practical laminate option with a smooth formed front edge. Great for kitchens, laundry rooms, and everyday residential projects.",
+  },
+  {
+    title: "Custom Laminate Countertops",
+    text: "Built for layouts that need more flexibility, custom sizing, seams, radius corners, or specialty edge details.",
+  },
+  {
+    title: "Square Edge Laminate",
+    text: "A clean, modern laminate style with a straight front edge. A good option when you want a simple updated look.",
+  },
+  {
+    title: "Butcher Block Countertops",
+    text: "A warm wood-look option for islands, work areas, laundry rooms, and select kitchen layouts.",
+  },
+  {
+    title: "Solid Surface Countertops",
+    text: "A smooth, repairable surface option using materials like Corian. Great for a clean and seamless-looking finish.",
+  },
+];
+
 const trustPoints = [
   {
     icon: <Clock className="h-6 w-6" />,
@@ -183,6 +206,40 @@ export default function Home() {
         </div>
       </section>
 
+            <section className="bg-stone-100 px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+              Countertop Styles
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold">
+              Choose the countertop style that fits your project.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-stone-600">
+              Not every countertop project needs the same material or edge
+              style. We help homeowners compare practical options like
+              postform, custom laminate, butcher block, and solid surface.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+            {countertopStyles.map((style) => (
+              <div
+                key={style.title}
+                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-xl font-bold">{style.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-stone-600">
+                  {style.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
             <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 lg:grid-cols-3">
         <div className="rounded-3xl bg-stone-950 p-8 text-white">
           <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
@@ -282,6 +339,41 @@ export default function Home() {
               Text photos, measurements, material preference, and city to
               832-703-2596.
             </p>
+          </div>
+        </div>
+      </section>
+
+            <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+              Project Gallery
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold">
+              Countertop project photos coming soon.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-stone-600">
+              We’ll be adding photos of completed laminate, postform, butcher
+              block, and solid surface countertop projects. For now, text us
+              photos of your layout and we can help you get started.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              "Laminate Kitchens",
+              "Solid Surface Projects",
+              "Butcher Block Tops",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex min-h-64 items-end rounded-3xl border border-dashed border-stone-300 bg-stone-100 p-6"
+              >
+                <p className="text-xl font-bold text-stone-700">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
