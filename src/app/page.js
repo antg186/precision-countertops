@@ -83,23 +83,41 @@ const trustPoints = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-stone-50 text-stone-950">
-      <header className="border-b border-stone-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div>
-            <p className="text-xl font-bold">Precision Countertops</p>
-            <p className="text-xs font-medium uppercase tracking-widest text-stone-500">
-              Greater Houston Area
-            </p>
-          </div>
+      <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <div>
+      <p className="text-xl font-bold">Precision Countertops</p>
+      <p className="text-xs font-medium uppercase tracking-widest text-stone-500">
+        Greater Houston Area
+      </p>
+    </div>
 
-          <a
-            href="tel:2814439785"
-            className="rounded-full bg-stone-950 px-5 py-3 text-sm font-semibold text-white"
-          >
-            Call Office
-          </a>
-        </div>
-      </header>
+    <nav className="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
+      <a href="#services" className="hover:text-stone-950">
+        Services
+      </a>
+      <a href="#styles" className="hover:text-stone-950">
+        Styles
+      </a>
+      <a href="#process" className="hover:text-stone-950">
+        Quote Process
+      </a>
+      <a href="#areas" className="hover:text-stone-950">
+        Service Areas
+      </a>
+      <a href="#contact" className="hover:text-stone-950">
+        Contact
+      </a>
+    </nav>
+
+    <a
+      href="tel:2814439785"
+      className="rounded-full bg-stone-950 px-5 py-3 text-sm font-semibold text-white"
+    >
+      Call Office
+    </a>
+  </div>
+</header>
 
       <section className="bg-stone-950 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 lg:grid-cols-2">
@@ -168,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-5 md:grid-cols-4">
           {trustPoints.map((point) => (
             <div key={point.title} className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
@@ -184,7 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20">
+      <section id="services" className="bg-white px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
             Our Services
@@ -204,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-            <section className="bg-stone-100 px-6 py-20">
+            <section id="styles" className="bg-stone-100 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
@@ -376,7 +394,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section id="areas" className="mx-auto max-w-7xl px-6 py-20">
         <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
           Service Areas
         </p>
@@ -394,7 +412,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-stone-950 px-6 py-20 text-white">
+      <section id="contact" className="bg-stone-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
             Contact
