@@ -71,7 +71,7 @@ const galleryImages = [
   {
     src: "/images/gallery-white-island.jpg",
     title: "Custom Kitchen Countertops",
-    text: "White marble-look countertop with a clean island layout and integrated sink.",
+    text: "Calcutta Marble laminate countertop with a clean island layout and topmount sink.",
   },
   {
     src: "/images/gallery-wide-kitchen.jpg",
