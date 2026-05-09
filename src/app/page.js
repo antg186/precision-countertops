@@ -218,7 +218,7 @@ export default function Home() {
               </a>
 
               <a
-                href="sms:8327032596"
+                href="sms:2815476887"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/5 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
               >
                 <MessageSquareText className="mr-2 h-5 w-5" />
@@ -257,7 +257,7 @@ export default function Home() {
 
                 <div className="mt-8 grid gap-3">
                   <a
-                    href="sms:8327032596"
+                    href="sms:2815476887"
                     className="rounded-2xl bg-stone-950 p-5 text-white transition hover:bg-stone-800"
                   >
                     <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
@@ -798,7 +798,7 @@ export default function Home() {
 
               <div className="mt-5 grid gap-4">
                 <a
-                  href="sms:8327032596"
+                  href="sms:2815476887"
                   className="rounded-2xl bg-stone-950 px-5 py-4 text-center font-semibold text-white transition hover:bg-stone-800"
                 >
                   Text Photos: 832-703-2596
@@ -917,7 +917,7 @@ export default function Home() {
               </a>
 
               <a
-                href="sms:8327032596"
+                href="sms:2815476887"
                 className="flex items-center gap-4 rounded-3xl border border-stone-200 p-5 transition hover:bg-stone-50"
               >
                 <MessageSquareText className="h-7 w-7 text-amber-700" />
