@@ -482,57 +482,97 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
-              Colors & Finishes
+              Browse Colors
             </p>
 
             <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-              Browse countertop colors, patterns, and finishes.
+              Explore countertop colors directly from the manufacturers.
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-stone-600">
-              Color availability can depend on the material, supplier, project
-              size, and timeline. We can help you review practical options based
-              on your project.
+              Color availability can change by brand, supplier, material,
+              finish, and project timeline. For the most accurate options,
+              browse the official manufacturer color pages and send us the
+              colors you like with your quote request.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Wilsonart Laminate Colors",
-                text: "Laminate colors and patterns for kitchens, bathrooms, rentals, laundry rooms, and workspaces.",
+                title: "Wilsonart",
+                material: "Laminate & Solid Surface",
+                text: "Browse Wilsonart laminate and solid surface colors, patterns, stone looks, woodgrains, and modern surface options.",
+                link: "https://www.wilsonart.com/color-search",
               },
               {
-                title: "Formica Laminate Colors",
-                text: "Durable laminate finishes with a wide range of stone-look, wood-look, and solid color options.",
+                title: "Formica",
+                material: "Laminate & Solid Surface",
+                text: "Explore Formica laminate colors and Everform solid surface options for residential and commercial projects.",
+                link: "https://www.formica.com/en-us/products/lamtrade/colors",
               },
               {
-                title: "Corian Solid Surface Colors",
-                text: "Solid surface colors for a clean, smooth, and repairable countertop finish.",
+                title: "Corian",
+                material: "Solid Surface",
+                text: "View Corian solid surface colors for clean, smooth, durable, and repairable countertop designs.",
+                link: "https://www.corian.com/-colors-of-corian-r-",
               },
               {
-                title: "Quartz Options",
-                text: "Engineered stone colors for customers wanting a durable stone-look surface.",
+                title: "HI-MACS",
+                material: "Solid Surface",
+                text: "Browse HI-MACS solid surface colors including whites, neutrals, concrete looks, terrazzo styles, and marble-inspired designs.",
+                link: "https://www.lxhausys.com/us/products/himacs-solid-surface/himacs-finder",
               },
               {
-                title: "Granite Options",
-                text: "Natural stone colors and patterns for a classic countertop look.",
+                title: "Staron",
+                material: "Solid Surface",
+                text: "Explore Staron solid surface color collections for residential, commercial, and specialty countertop projects.",
+                link: "https://www.radianz-quartz.com/staron/ca/color/list",
               },
               {
-                title: "Butcher Block Options",
-                text: "Wood-look countertop options for islands, work areas, and warm accent surfaces.",
+                title: "Avonite",
+                material: "Solid Surface",
+                text: "Browse Avonite solid surface colors and patterns for bold, modern, and practical countertop applications.",
+                link: "https://aristechsurfaces.com/market/architectural/avonite",
               },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl border border-stone-200 bg-stone-50 p-6 shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-md"
+              {
+                title: "Hanex",
+                material: "Solid Surface",
+                text: "View Hanex solid surface colors including white, cream, gray, concrete, and marble-inspired options.",
+                link: "https://www.hanex.com/collections/all_colors.php",
+              },
+            ].map((brand) => (
+              <a
+                key={brand.title}
+                href={brand.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-3xl border border-stone-200 bg-stone-50 p-6 shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-md"
               >
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-stone-600">
-                  {item.text}
+                <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+                  {brand.material}
                 </p>
-              </div>
+
+                <h3 className="mt-3 text-2xl font-bold">{brand.title}</h3>
+
+                <p className="mt-4 text-sm leading-6 text-stone-600">
+                  {brand.text}
+                </p>
+
+                <p className="mt-6 font-semibold text-amber-700 group-hover:text-amber-800">
+                  Browse colors →
+                </p>
+              </a>
             ))}
+          </div>
+
+          <div className="mt-8 rounded-3xl border border-amber-200 bg-amber-50 p-6">
+            <p className="text-sm leading-6 text-amber-950">
+              Tip: When requesting a quote, send the brand name, color name,
+              finish, and a screenshot or link if possible. Final availability
+              may depend on supplier stock, project details, and material lead
+              times.
+            </p>
           </div>
         </div>
       </section>
@@ -718,7 +758,7 @@ export default function Home() {
               {
                 question: "Do you do commercial work?",
                 answer:
-                  "Precision Countertops primarily focuses on residential and multifamily countertop projects. Larger commercial projects may be reviewed depending on scope, location, material, and schedule.",
+                  "Yes. Precision Countertops works on residential, multifamily, and select commercial countertop projects. Commercial availability may depend on scope, location, material, timeline, and scheduling.",
               },
             ].map((item) => (
               <div
