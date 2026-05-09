@@ -222,7 +222,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/5 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
               >
                 <MessageSquareText className="mr-2 h-5 w-5" />
-                Text Photos
+                Text
               </a>
             </div>
 
