@@ -12,9 +12,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Precision Countertops | Countertop Installation in Greater Houston",
+ title:
+    "Precision Countertops | Countertops in Greater Houston",
   description:
-    "Precision Countertops is a family-owned countertop fabrication and installation company serving Greater Houston. We specialize in laminate, postform, butcher block, and solid surface countertops.",
+    "Precision Countertops provides residential and multifamily countertop services across Greater Houston, including laminate, postform, butcher block, solid surface, quartz, and granite countertops.",
 };
 
 export default function RootLayout({ children }) {
