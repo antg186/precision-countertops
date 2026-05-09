@@ -11,12 +11,16 @@ import {
 const services = [
   "Laminate Countertops",
   "Postform Countertops",
-  "Custom Laminate",
+  "Custom / Square Edge Laminate",
   "Solid Surface Countertops",
   "Butcher Block Countertops",
+  "Quartz Countertops",
+  "Granite Countertops",
   "Countertop Measurement",
   "Countertop Installation",
   "Demo & Removal",
+  "Rental Property Countertops",
+  "Multifamily Countertops",
 ];
 
 const serviceAreas = [
@@ -37,15 +41,11 @@ const serviceAreas = [
 const countertopStyles = [
   {
     title: "Postform Countertops",
-    text: "A practical laminate option with a smooth formed front edge. Great for kitchens, laundry rooms, and everyday residential projects.",
+    text: "A practical laminate option with a smooth formed front edge. Great for kitchens, laundry rooms, rentals, and everyday residential projects.",
   },
   {
-    title: "Custom Laminate Countertops",
-    text: "Built for layouts that need more flexibility, custom sizing, seams, radius corners, or specialty edge details.",
-  },
-  {
-    title: "Square Edge Laminate",
-    text: "A clean, modern laminate style with a straight front edge. A good option when you want a simple updated look.",
+    title: "Custom / Square Edge Laminate",
+    text: "A clean laminate option for layouts needing custom sizing, straight edges, seams, radius corners, or specialty details.",
   },
   {
     title: "Butcher Block Countertops",
@@ -54,6 +54,10 @@ const countertopStyles = [
   {
     title: "Solid Surface Countertops",
     text: "A smooth, repairable surface option using materials like Corian. Great for a clean and seamless-looking finish.",
+  },
+  {
+    title: "Quartz & Granite Countertops",
+    text: "Durable stone countertop options for customers looking for a natural stone or engineered stone surface.",
   },
 ];
 
@@ -132,28 +136,32 @@ export default function Home() {
             </p>
 
             <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-              Residential Laminate & Solid Surface Countertops in Greater
-              Houston
+              Residential & Multifamily Countertops in Greater Houston Houston
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-              Precision Countertops is a family-owned countertop shop
-              specializing in laminate, postform, butcher block, and solid
-              surface countertops for homeowners across the Greater Houston
-              Area.
+              Precision Countertops is a family-owned countertop shop helping
+              homeowners, rental property owners, and multifamily properties
+              with laminate, postform, butcher block, solid surface, quartz, and
+              granite countertops across the Greater Houston Area.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Laminate", "Postform", "Butcher Block", "Solid Surface"].map(
-                (item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-stone-100"
-                  >
-                    {item}
-                  </span>
-                ),
-              )}
+              {[
+                "Laminate",
+                "Postform",
+                "Solid Surface",
+                "Quartz",
+                "Granite",
+                "Butcher Block",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-stone-100"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -278,6 +286,57 @@ export default function Home() {
                 className="rounded-3xl border border-stone-200 bg-stone-50 p-6 font-semibold shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-md"
               >
                 {service}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-stone-950 px-6 py-24 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
+              Residential & Multifamily
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+              Countertops for homes, rentals, and multifamily properties.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-stone-300">
+              Precision Countertops helps with practical countertop solutions
+              for single-family homes, rental properties, apartment units, and
+              multifamily turnovers across the Greater Houston Area.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {[
+              {
+                title: "Homeowners",
+                text: "Kitchen, bathroom, laundry room, island, and workspace countertop projects.",
+              },
+              {
+                title: "Rental Properties",
+                text: "Durable countertop options for rental homes and investment properties.",
+              },
+              {
+                title: "Multifamily Units",
+                text: "Countertop replacement and installation options for apartment and multifamily properties.",
+              },
+              {
+                title: "Property Turnovers",
+                text: "Practical material options for projects where durability, schedule, and budget matter.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-white/5 p-6"
+              >
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-stone-300">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
