@@ -83,47 +83,47 @@ const trustPoints = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-stone-50 text-stone-950">
-      <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur">
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-    <div>
-      <p className="text-xl font-bold">Precision Countertops</p>
-      <p className="text-xs font-medium uppercase tracking-widest text-stone-500">
-        Greater Houston Area
-      </p>
-    </div>
+      <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/95 shadow-sm backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+          <div>
+            <p className="text-xl font-bold">Precision Countertops</p>
+            <p className="text-xs font-medium uppercase tracking-widest text-stone-500">
+              Greater Houston Area
+            </p>
+          </div>
 
-    <nav className="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
-      <a href="#services" className="hover:text-stone-950">
-        Services
-      </a>
-      <a href="#styles" className="hover:text-stone-950">
-        Styles
-      </a>
-      <a href="#process" className="hover:text-stone-950">
-        Quote Process
-      </a>
-      <a href="#quote" className="hover:text-stone-950">
-        Request Quote
-      </a>
-      <a href="#areas" className="hover:text-stone-950">
-        Service Areas
-      </a>
-      <a href="#contact" className="hover:text-stone-950">
-        Contact
-      </a>
-    </nav>
+          <nav className="hidden items-center gap-8 text-sm font-medium text-stone-700 md:flex">
+            <a href="#services" className="hover:text-stone-950">
+              Services
+            </a>
+            <a href="#styles" className="hover:text-stone-950">
+              Styles
+            </a>
+            <a href="#process" className="hover:text-stone-950">
+              Quote Process
+            </a>
+            <a href="#quote" className="hover:text-stone-950">
+              Request Quote
+            </a>
+            <a href="#areas" className="hover:text-stone-950">
+              Service Areas
+            </a>
+            <a href="#contact" className="hover:text-stone-950">
+              Contact
+            </a>
+          </nav>
 
-    <a
-      href="tel:2814439785"
-      className="rounded-full bg-stone-950 px-5 py-3 text-sm font-semibold text-white"
-    >
-      Call Office
-    </a>
-  </div>
-</header>
+          <a
+            href="tel:2814439785"
+            className="rounded-full bg-stone-950 px-5 py-3 text-sm font-semibold text-white"
+          >
+            Call Office
+          </a>
+        </div>
+      </header>
 
-            <section className="relative overflow-hidden bg-stone-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(180,135,80,0.28),transparent_35%)]" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-stone-950 via-stone-900 to-stone-800 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,6,0.25),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]" />
 
         <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
           <div>
@@ -132,13 +132,15 @@ export default function Home() {
             </p>
 
             <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-              Residential Laminate & Solid Surface Countertops in Greater Houston
+              Residential Laminate & Solid Surface Countertops in Greater
+              Houston
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-              Precision Countertops is a family-owned countertop shop specializing
-              in laminate, postform, butcher block, and solid surface countertops
-              for homeowners across the Greater Houston Area.
+              Precision Countertops is a family-owned countertop shop
+              specializing in laminate, postform, butcher block, and solid
+              surface countertops for homeowners across the Greater Houston
+              Area.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -150,14 +152,14 @@ export default function Home() {
                   >
                     {item}
                   </span>
-                )
+                ),
               )}
             </div>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="tel:2814439785"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 font-semibold text-stone-950 shadow-lg transition hover:bg-stone-100"
+                className="inline-flex items-center justify-center rounded-2xl bg-amber-500 px-6 py-4 font-semibold text-stone-950 shadow-lg transition hover:bg-amber-400"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call 281-443-9785
@@ -165,7 +167,7 @@ export default function Home() {
 
               <a
                 href="sms:8327032596"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/30 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/5 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
               >
                 <MessageSquareText className="mr-2 h-5 w-5" />
                 Text Photos
@@ -173,8 +175,8 @@ export default function Home() {
             </div>
 
             <p className="mt-5 text-sm leading-6 text-stone-400">
-               Send photos, rough measurements, material preference, and city by text
-               or email for the fastest starting quote.
+              Send photos, rough measurements, material preference, and city by
+              text or email for the fastest starting quote.
             </p>
           </div>
 
@@ -230,7 +232,9 @@ export default function Home() {
                   <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
                     Email Photos
                   </p>
-                  <p className="mt-2 text-xl font-bold">quotes@precisionctops.com</p>
+                  <p className="mt-2 text-xl font-bold">
+                    quotes@precisionctops.com
+                  </p>
                 </a>
               </div>
             </div>
@@ -241,7 +245,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-5 md:grid-cols-4">
           {trustPoints.map((point) => (
-            <div key={point.title} className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div
+              key={point.title}
+              className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            >
               <div className="mb-5 inline-flex rounded-2xl bg-amber-100 p-3 text-amber-800">
                 {point.icon}
               </div>
@@ -266,7 +273,10 @@ export default function Home() {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <div key={service} className="rounded-3xl border border-stone-200 bg-stone-50 p-6 font-semibold">
+              <div
+                key={service}
+                className="rounded-3xl border border-stone-200 bg-stone-50 p-6 font-semibold shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-md"
+              >
                 {service}
               </div>
             ))}
@@ -274,7 +284,7 @@ export default function Home() {
         </div>
       </section>
 
-            <section id="styles" className="bg-stone-100 px-6 py-20">
+      <section id="styles" className="bg-stone-100 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
@@ -287,8 +297,8 @@ export default function Home() {
 
             <p className="mt-5 text-lg leading-8 text-stone-600">
               Not every countertop project needs the same material or edge
-              style. We help homeowners compare practical options like
-              postform, custom laminate, butcher block, and solid surface.
+              style. We help homeowners compare practical options like postform,
+              custom laminate, butcher block, and solid surface.
             </p>
           </div>
 
@@ -296,7 +306,7 @@ export default function Home() {
             {countertopStyles.map((style) => (
               <div
                 key={style.title}
-                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm"
+                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
                 <h3 className="text-xl font-bold">{style.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-stone-600">
@@ -308,7 +318,7 @@ export default function Home() {
         </div>
       </section>
 
-            <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 lg:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 lg:grid-cols-3">
         <div className="rounded-3xl bg-stone-950 p-8 text-white">
           <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
             Materials
@@ -319,8 +329,8 @@ export default function Home() {
           </h2>
 
           <p className="mt-5 leading-7 text-stone-300">
-            Turnaround depends on material selection, edge details, project size,
-            and scheduling.
+            Turnaround depends on material selection, edge details, project
+            size, and scheduling.
           </p>
         </div>
 
@@ -350,7 +360,7 @@ export default function Home() {
         </div>
       </section>
 
-            <section id="process" className="bg-stone-100 px-6 py-20">
+      <section id="process" className="bg-stone-100 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
@@ -363,9 +373,9 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-stone-600">
-                Instead of sending someone out before knowing the project details,
-                we start with photos and basic information. This helps save time
-                and gives you a clearer next step.
+                Instead of sending someone out before knowing the project
+                details, we start with photos and basic information. This helps
+                save time and gives you a clearer next step.
               </p>
             </div>
 
@@ -404,14 +414,14 @@ export default function Home() {
           <div className="mt-10 rounded-3xl bg-stone-950 p-8 text-white">
             <h3 className="text-2xl font-bold">Need pricing faster?</h3>
             <p className="mt-3 text-stone-300">
-              Text photos, measurements, material preference, and city to 832-703-2596,
-              or email them to quotes@precisionctops.com.
+              Text photos, measurements, material preference, and city to
+              832-703-2596, or email them to quotes@precisionctops.com.
             </p>
           </div>
         </div>
       </section>
 
-            <section className="bg-white px-6 py-20">
+      <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
@@ -437,7 +447,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex min-h-64 items-end rounded-3xl border border-dashed border-stone-300 bg-stone-100 p-6"
+                className="flex min-h-72 items-end rounded-3xl border border-dashed border-stone-300 bg-gradient-to-br from-stone-100 to-stone-200 p-6 shadow-sm"
               >
                 <p className="text-xl font-bold text-stone-700">{item}</p>
               </div>
@@ -457,14 +467,17 @@ export default function Home() {
 
         <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           {serviceAreas.map((area) => (
-            <div key={area} className="rounded-2xl border border-stone-200 bg-white px-5 py-4 font-semibold shadow-sm">
+            <div
+              key={area}
+              className="rounded-2xl border border-stone-200 bg-white px-5 py-4 font-semibold shadow-sm"
+            >
               {area}
             </div>
           ))}
         </div>
       </section>
 
-            <section className="bg-white px-6 py-20">
+      <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
@@ -528,7 +541,7 @@ export default function Home() {
         </div>
       </section>
 
-            <section id="quote" className="bg-stone-100 px-6 py-20">
+      <section id="quote" className="bg-stone-100 px-6 py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
@@ -545,7 +558,9 @@ export default function Home() {
             </p>
 
             <div className="mt-8 rounded-3xl bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-bold">Send your project details to:</h3>
+              <h3 className="text-xl font-bold">
+                Send your project details to:
+              </h3>
 
               <div className="mt-5 grid gap-4">
                 <a
@@ -612,7 +627,7 @@ export default function Home() {
         </div>
       </section>
 
-            <section id="contact" className="bg-stone-950 px-6 py-20 text-white">
+      <section id="contact" className="bg-stone-950 px-6 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
