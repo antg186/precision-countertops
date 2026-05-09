@@ -21,6 +21,7 @@ const services = [
   "Demo & Removal",
   "Rental Property Countertops",
   "Multifamily Countertops",
+  "Commercial Countertops",
 ];
 
 const serviceAreas = [
@@ -138,6 +139,9 @@ export default function Home() {
             <a href="#services" className="hover:text-stone-950">
               Services
             </a>
+            <a href="#commercial" className="hover:text-stone-950">
+              Commercial
+            </a>
             <a href="#styles" className="hover:text-stone-950">
               Styles
             </a>
@@ -174,14 +178,16 @@ export default function Home() {
             </p>
 
             <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-              Residential & Multifamily Countertops in Greater Houston
+              Residential, Multifamily & Commercial Countertops in Greater
+              Houston
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
               Precision Countertops is a family-owned countertop shop helping
-              homeowners, rental property owners, and multifamily properties
-              with laminate, postform, butcher block, solid surface, quartz, and
-              granite countertops across the Greater Houston Area.
+              homeowners, rental property owners, multifamily properties, and
+              select commercial projects with laminate, postform, butcher block,
+              solid surface, quartz, and granite countertops across the Greater
+              Houston Area.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -320,21 +326,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-stone-950 px-6 py-24 text-white">
+      <section id="commercial" className="bg-stone-950 px-6 py-24 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-amber-300">
-              Residential & Multifamily
+              Residential • Multifamily • Commercial
             </p>
 
             <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-              Countertops for homes, rentals, and multifamily properties.
+              Countertops for homes, rentals, multifamily properties, and select
+              commercial spaces.
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-stone-300">
               Precision Countertops helps with practical countertop solutions
-              for single-family homes, rental properties, apartment units, and
-              multifamily turnovers across the Greater Houston Area.
+              for single-family homes, rental properties, apartment units,
+              office spaces, break rooms, vanity areas, and commercial projects
+              across the Greater Houston Area.
             </p>
           </div>
 
@@ -353,8 +361,8 @@ export default function Home() {
                 text: "Countertop replacement and installation options for apartment and multifamily properties.",
               },
               {
-                title: "Property Turnovers",
-                text: "Practical material options for projects where durability, schedule, and budget matter.",
+                title: "Commercial Projects",
+                text: "Countertop options for offices, break rooms, vanity areas, workspaces, and select commercial spaces.",
               },
             ].map((item) => (
               <div
