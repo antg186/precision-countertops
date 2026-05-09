@@ -632,7 +632,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold">Need pricing faster?</h3>
             <p className="mt-3 text-stone-300">
               Text photos, measurements, material preference, and city to
-              832-703-2596, or email them to quotes@precisionctops.com.
+              281-547-6887, or email them to quotes@precisionctops.com.
             </p>
           </div>
         </div>
@@ -801,7 +801,7 @@ export default function Home() {
                   href="sms:2815476887"
                   className="rounded-2xl bg-stone-950 px-5 py-4 text-center font-semibold text-white transition hover:bg-stone-800"
                 >
-                  Text Photos: 832-703-2596
+                  Text Photos: 281-547-6887
                 </a>
 
                 <a
@@ -925,7 +925,7 @@ export default function Home() {
                   <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
                     Text Photos
                   </p>
-                  <p className="text-2xl font-bold">832-703-2596</p>
+                  <p className="text-2xl font-bold">281-547-6887</p>
                 </div>
               </a>
 
