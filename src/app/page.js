@@ -261,9 +261,9 @@ export default function Home() {
                     className="rounded-2xl bg-stone-950 p-5 text-white transition hover:bg-stone-800"
                   >
                     <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
-                      Text Photos
+                      Text Photos, Drawings, Layouts, Measurements
                     </p>
-                    <p className="mt-2 text-2xl font-bold">2815476887</p>
+                    <p className="mt-2 text-2xl font-bold">281-547-6887</p>
                   </a>
 
                   <a
@@ -271,7 +271,7 @@ export default function Home() {
                     className="rounded-2xl border border-stone-200 bg-stone-50 p-5 text-stone-950 transition hover:bg-stone-100"
                   >
                     <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
-                      Email Photos
+                      Email Photos, Drawings, Layouts, Measurements
                     </p>
                     <p className="mt-2 text-xl font-bold">
                       quotes@precisionctops.com
