@@ -263,7 +263,7 @@ export default function Home() {
                     <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
                       Text Photos
                     </p>
-                    <p className="mt-2 text-2xl font-bold">832-703-2596</p>
+                    <p className="mt-2 text-2xl font-bold">2815476887</p>
                   </a>
 
                   <a
