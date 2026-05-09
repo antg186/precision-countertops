@@ -41,23 +41,61 @@ const serviceAreas = [
 const countertopStyles = [
   {
     title: "Postform Countertops",
-    text: "A practical laminate option with a smooth formed front edge. Great for kitchens, laundry rooms, rentals, and everyday residential projects.",
+    text: "A practical countertop option with a smooth formed front edge. Great for kitchens, laundry rooms, rentals, and everyday residential projects.",
+    image: "/images/gallery-wide-kitchen.jpg",
   },
   {
     title: "Custom / Square Edge Laminate",
-    text: "A clean laminate option for layouts needing custom sizing, straight edges, seams, radius corners, or specialty details.",
+    text: "A clean countertop option for layouts needing custom sizing, straight edges, seams, radius corners, or specialty details.",
+    image: "/images/gallery-white-island.jpg",
   },
   {
     title: "Butcher Block Countertops",
-    text: "A warm wood-look option for islands, work areas, laundry rooms, and select kitchen layouts.",
+    text: "A warm wood countertop option for islands, work areas, laundry rooms, and select kitchen layouts.",
+    image: "/images/hero-butcher-block.jpg",
   },
   {
     title: "Solid Surface Countertops",
     text: "A smooth, repairable surface option using materials like Corian. Great for a clean and seamless-looking finish.",
+    image: "/images/gallery-solid-surface-kitchen.jpg",
   },
   {
     title: "Quartz & Granite Countertops",
     text: "Durable stone countertop options for customers looking for a natural stone or engineered stone surface.",
+    image: "/images/gallery-quartz-kitchen.jpg",
+  },
+];
+
+const galleryImages = [
+  {
+    src: "/images/gallery-white-island.jpg",
+    title: "Custom Kitchen Countertops",
+    text: "White marble-look countertop with a clean island layout and integrated sink.",
+  },
+  {
+    src: "/images/gallery-wide-kitchen.jpg",
+    title: "Residential Kitchen Countertop Installation",
+    text: "A full kitchen countertop project with a clean, finished layout.",
+  },
+  {
+    src: "/images/gallery-vanity-tops.jpg",
+    title: "Multifamily Vanity Tops",
+    text: "Long vanity top setup with multiple sink openings for shared-use spaces.",
+  },
+  {
+    src: "/images/gallery-solid-surface-kitchen.jpg",
+    title: "Solid Surface Kitchen Countertops",
+    text: "Solid surface countertops with a clean speckled finish and practical kitchen layout.",
+  },
+  {
+    src: "/images/gallery-solid-surface-full-height.jpg",
+    title: "Full-Height Solid Surface Backsplash",
+    text: "Clean white solid surface countertop with matching full-height backsplash.",
+  },
+  {
+    src: "/images/gallery-quartz-kitchen.jpg",
+    title: "Quartz Kitchen Countertops",
+    text: "Quartz countertop project with a durable stone surface and polished kitchen finish.",
   },
 ];
 
@@ -70,17 +108,17 @@ const trustPoints = [
   {
     icon: <HomeIcon className="h-6 w-6" />,
     title: "Family-Owned",
-    text: "A local residential countertop company serving Greater Houston homeowners.",
+    text: "A local residential and multifamily countertop company serving Greater Houston.",
   },
   {
     icon: <ShieldCheck className="h-6 w-6" />,
     title: "Licensed & Insured",
-    text: "Professional service with the experience and coverage homeowners expect.",
+    text: "Professional service with the experience and coverage customers expect.",
   },
   {
     icon: <Hammer className="h-6 w-6" />,
     title: "Fabricated In-House",
-    text: "Your countertops are fabricated in our own shop for better control and quality.",
+    text: "Many countertop projects are fabricated in our own shop for better control and quality.",
   },
 ];
 
@@ -136,7 +174,7 @@ export default function Home() {
             </p>
 
             <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-              Residential & Multifamily Countertops in Greater Houston Houston
+              Residential & Multifamily Countertops in Greater Houston
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
@@ -188,62 +226,52 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur">
-            <div className="rounded-[1.5rem] bg-white p-8 text-stone-950">
-              <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
-                Start Your Quote
-              </p>
+          <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur">
+            <div className="overflow-hidden rounded-[1.5rem] bg-white text-stone-950">
+              <img
+                src="/images/hero-butcher-block.jpg"
+                alt="Butcher block island countertop installed in a residential kitchen"
+                className="h-80 w-full object-cover"
+              />
 
-              <h2 className="mt-4 text-3xl font-bold">
-                Send photos before scheduling a measure.
-              </h2>
+              <div className="p-8">
+                <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+                  Real Countertop Projects
+                </p>
 
-              <p className="mt-4 leading-7 text-stone-700">
-                To avoid wasted trips, send your city, layout photos, cabinet
-                status, and rough measurements first. We’ll help determine the
-                next step for your countertop project.
-              </p>
+                <h2 className="mt-4 text-3xl font-bold">
+                  Countertops for kitchens, rentals, and multifamily spaces.
+                </h2>
 
-              <div className="mt-8 space-y-4">
-                {[
-                  "Photos of current countertops or cabinet layout",
-                  "City or ZIP code",
-                  "Material you’re interested in",
-                  "New cabinets or existing cabinets",
-                  "Approximate measurements if available",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 rounded-2xl bg-stone-100 p-4"
+                <p className="mt-4 leading-7 text-stone-700">
+                  From laminate and solid surface to butcher block, quartz, and
+                  granite, we help customers choose practical countertop options
+                  for their project, timeline, and budget.
+                </p>
+
+                <div className="mt-8 grid gap-3">
+                  <a
+                    href="sms:8327032596"
+                    className="rounded-2xl bg-stone-950 p-5 text-white transition hover:bg-stone-800"
                   >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-amber-700" />
-                    <p className="text-sm font-medium">{item}</p>
-                  </div>
-                ))}
-              </div>
+                    <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
+                      Text Photos
+                    </p>
+                    <p className="mt-2 text-2xl font-bold">832-703-2596</p>
+                  </a>
 
-              <div className="mt-8 grid gap-3">
-                <a
-                  href="sms:8327032596"
-                  className="rounded-2xl bg-stone-950 p-5 text-white transition hover:bg-stone-800"
-                >
-                  <p className="text-sm font-semibold uppercase tracking-widest text-amber-300">
-                    Text Photos
-                  </p>
-                  <p className="mt-2 text-2xl font-bold">832-703-2596</p>
-                </a>
-
-                <a
-                  href="mailto:quotes@precisionctops.com"
-                  className="rounded-2xl border border-stone-200 bg-stone-50 p-5 text-stone-950 transition hover:bg-stone-100"
-                >
-                  <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
-                    Email Photos
-                  </p>
-                  <p className="mt-2 text-xl font-bold">
-                    quotes@precisionctops.com
-                  </p>
-                </a>
+                  <a
+                    href="mailto:quotes@precisionctops.com"
+                    className="rounded-2xl border border-stone-200 bg-stone-50 p-5 text-stone-950 transition hover:bg-stone-100"
+                  >
+                    <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">
+                      Email Photos
+                    </p>
+                    <p className="mt-2 text-xl font-bold">
+                      quotes@precisionctops.com
+                    </p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -276,7 +304,7 @@ export default function Home() {
           </p>
 
           <h2 className="mt-4 text-4xl font-bold">
-            Countertop services for residential projects.
+            Countertop services for residential and multifamily projects.
           </h2>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -356,8 +384,9 @@ export default function Home() {
 
             <p className="mt-5 text-lg leading-8 text-stone-600">
               Not every countertop project needs the same material or edge
-              style. We help homeowners compare practical options like postform,
-              custom laminate, butcher block, and solid surface.
+              style. We help customers compare practical options like postform,
+              custom laminate, butcher block, solid surface, quartz, and
+              granite.
             </p>
           </div>
 
@@ -365,12 +394,22 @@ export default function Home() {
             {countertopStyles.map((style) => (
               <div
                 key={style.title}
-                className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className="group relative min-h-80 overflow-hidden rounded-3xl border border-stone-200 bg-stone-950 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <h3 className="text-xl font-bold">{style.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-stone-600">
-                  {style.text}
-                </p>
+                <img
+                  src={style.image}
+                  alt={style.title}
+                  className="absolute inset-0 h-full w-full object-cover opacity-70 transition duration-500 group-hover:scale-105 group-hover:opacity-80"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/55 to-transparent" />
+
+                <div className="relative flex h-full min-h-80 flex-col justify-end p-6 text-white">
+                  <h3 className="text-2xl font-bold">{style.title}</h3>
+                  <p className="mt-4 text-sm leading-6 text-stone-200">
+                    {style.text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -393,11 +432,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-3 lg:col-span-2">
+        <div className="grid gap-5 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
           {[
             {
               title: "Wilsonart",
-              text: "Popular laminate options for residential kitchens, bathrooms, laundry rooms, and workspaces.",
+              text: "Popular laminate options for kitchens, bathrooms, laundry rooms, rentals, and workspaces.",
             },
             {
               title: "Formica",
@@ -407,15 +446,86 @@ export default function Home() {
               title: "Corian",
               text: "Solid surface material with a clean look, smooth feel, and repairable surface.",
             },
+            {
+              title: "Butcher Block",
+              text: "Warm wood-look countertop options for islands, work areas, laundry rooms, and select kitchen layouts.",
+            },
+            {
+              title: "Quartz",
+              text: "Engineered stone countertop options for customers wanting a durable and polished surface.",
+            },
+            {
+              title: "Granite",
+              text: "Natural stone countertop options for customers wanting a classic stone look.",
+            },
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm"
+              className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="text-2xl font-bold">{item.title}</h3>
               <p className="mt-4 leading-7 text-stone-600">{item.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+              Colors & Finishes
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+              Browse countertop colors, patterns, and finishes.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-stone-600">
+              Color availability can depend on the material, supplier, project
+              size, and timeline. We can help you review practical options based
+              on your project.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                title: "Wilsonart Laminate Colors",
+                text: "Laminate colors and patterns for kitchens, bathrooms, rentals, laundry rooms, and workspaces.",
+              },
+              {
+                title: "Formica Laminate Colors",
+                text: "Durable laminate finishes with a wide range of stone-look, wood-look, and solid color options.",
+              },
+              {
+                title: "Corian Solid Surface Colors",
+                text: "Solid surface colors for a clean, smooth, and repairable countertop finish.",
+              },
+              {
+                title: "Quartz Options",
+                text: "Engineered stone colors for customers wanting a durable stone-look surface.",
+              },
+              {
+                title: "Granite Options",
+                text: "Natural stone colors and patterns for a classic countertop look.",
+              },
+              {
+                title: "Butcher Block Options",
+                text: "Wood-look countertop options for islands, work areas, and warm accent surfaces.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-3xl border border-stone-200 bg-stone-50 p-6 shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-md"
+              >
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-stone-600">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -442,7 +552,7 @@ export default function Home() {
               {[
                 {
                   title: "1. Send Photos",
-                  text: "Text photos of your current countertops, cabinets, or layout drawings.",
+                  text: "Text or email photos of your current countertops, cabinets, or layout drawings.",
                 },
                 {
                   title: "2. Share Location",
@@ -450,11 +560,11 @@ export default function Home() {
                 },
                 {
                   title: "3. Choose Material",
-                  text: "Let us know if you want laminate, postform, butcher block, or solid surface.",
+                  text: "Let us know if you want laminate, postform, butcher block, solid surface, quartz, or granite.",
                 },
                 {
                   title: "4. Schedule Next Step",
-                  text: "If the project is a good fit, we’ll help move it toward measure and install.",
+                  text: "If the project is a good fit, we’ll help move it toward measure and installation.",
                 },
               ].map((step) => (
                 <div
@@ -480,35 +590,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20">
+      <section className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
-              Project Gallery
-            </p>
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+                Project Gallery
+              </p>
 
-            <h2 className="mt-4 text-4xl font-bold">
-              Countertop project photos coming soon.
-            </h2>
+              <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+                Real countertop projects completed for local homes and
+                properties.
+              </h2>
 
-            <p className="mt-5 text-lg leading-8 text-stone-600">
-              We’ll be adding photos of completed laminate, postform, butcher
-              block, and solid surface countertop projects. For now, text us
-              photos of your layout and we can help you get started.
-            </p>
+              <p className="mt-5 text-lg leading-8 text-stone-600">
+                Browse examples of countertop projects including solid surface,
+                butcher block, kitchen countertops, vanity tops, and residential
+                installations.
+              </p>
+            </div>
+
+            <a
+              href="#quote"
+              className="inline-flex rounded-2xl bg-stone-950 px-6 py-4 text-center font-semibold text-white transition hover:bg-stone-800"
+            >
+              Start a Quote
+            </a>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {[
-              "Laminate Kitchens",
-              "Solid Surface Projects",
-              "Butcher Block Tops",
-            ].map((item) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {galleryImages.map((image) => (
               <div
-                key={item}
-                className="flex min-h-72 items-end rounded-3xl border border-dashed border-stone-300 bg-gradient-to-br from-stone-100 to-stone-200 p-6 shadow-sm"
+                key={image.title}
+                className="overflow-hidden rounded-3xl border border-stone-200 bg-stone-50 shadow-sm transition hover:-translate-y-1 hover:bg-white hover:shadow-md"
               >
-                <p className="text-xl font-bold text-stone-700">{item}</p>
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  className="h-72 w-full object-cover"
+                />
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold">{image.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-stone-600">
+                    {image.text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -573,7 +700,7 @@ export default function Home() {
               {
                 question: "What materials do you work with?",
                 answer:
-                  "We work with laminate, postform, butcher block, and solid surface materials, including brands like Wilsonart, Formica, and Corian.",
+                  "We work with laminate, postform, butcher block, solid surface, quartz, and granite countertop materials, including brands like Wilsonart, Formica, and Corian.",
               },
               {
                 question: "What areas do you serve?",
@@ -583,7 +710,7 @@ export default function Home() {
               {
                 question: "Do you do commercial work?",
                 answer:
-                  "Precision Countertops mainly focuses on residential countertop projects for homeowners.",
+                  "Precision Countertops primarily focuses on residential and multifamily countertop projects. Larger commercial projects may be reviewed depending on scope, location, material, and schedule.",
               },
             ].map((item) => (
               <div
@@ -656,7 +783,7 @@ export default function Home() {
                 },
                 {
                   title: "3. Material preference",
-                  text: "Let us know if you want laminate, postform, butcher block, or solid surface.",
+                  text: "Let us know if you want laminate, postform, butcher block, solid surface, quartz, or granite.",
                 },
                 {
                   title: "4. Cabinet status",
